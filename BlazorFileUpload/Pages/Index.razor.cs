@@ -18,7 +18,7 @@ public partial class Index
         linkUrl = "";
         errorMessage = "";
 
-        if (!IsTextFile(fileName)) return; //guard clauses
+        if (!IsTextFile()) return; //guard clauses
         if (IsTooLargeFile()) return;
 
         using var readStream = e.File.OpenReadStream(GetMaxFileSize());
@@ -39,7 +39,7 @@ public partial class Index
         Logger.LogInformation("File '{fileName}' saved.", fileName);
     }
 
-    private bool IsTextFile(string fileName)
+    private bool IsTextFile()
     {
         if (fileName.EndsWith(".txt"))
         {
