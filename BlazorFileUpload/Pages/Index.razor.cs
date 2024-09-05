@@ -9,8 +9,8 @@ public partial class Index
     private long fileSize;
     private string errorMessage = "";
 
-    // The HandleFileSelection  method is called when a file is selected in the file-inputfield.
-    // It checks the file size and file ending and saves the file to the  wwwroot folder.
+    // The 'HandleFileSelection' method is called when a file is selected within the inputfield.
+    // It checks the file ending and file size and saves the file to the wwwroot folder.
     private async Task HandleFileSelection(InputFileChangeEventArgs e)
     {
         fileName = e.File.Name;
