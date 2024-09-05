@@ -1,0 +1,23 @@
+﻿@page "/"
+@inject ILogger<Index> Logger
+@inject IConfiguration Configuration
+
+<PageTitle>Blazor File-Upload</PageTitle>
+
+<div class="mt-4 mb-3">
+    Please select a txt-file:
+</div>
+
+<InputFile OnChange="HandleFileSelection" class="form" accept=".txt" />
+
+<div class="my-3">
+    File-Name: @fileName<br />
+    File-Size: @fileSize bytes
+</div>
+
+
+<div>
+    <a href="@linkUrl" target="_blank">@linkUrl</a>
+</div>
+
+<div class="text-danger">@errorMessage</div>
