@@ -46,7 +46,7 @@ public partial class Index
         }
 
         errorMessage = "File-ending must be '.txt'.";
-        Logger.LogInformation("File '{fileName}' is no txt-file.", fileName);
+        Logger.LogWarning("File '{fileName}' is no txt-file.", fileName);
         return false;
     }
 
@@ -60,7 +60,7 @@ public partial class Index
         };
 
         errorMessage = "File is too large.";
-        Logger.LogInformation("File '{fileName}' larger than {maxFileSize} ({fileSize} bytes).", fileName, maxFileSize, fileSize);
+        Logger.LogWarning("File '{fileName}' larger than {maxFileSize} ({fileSize} bytes).", fileName, maxFileSize, fileSize);
         return true;
     }
 
